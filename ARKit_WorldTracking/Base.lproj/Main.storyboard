@@ -22,11 +22,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9e2-xa-gOE">
-                                <rect key="frame" x="20" y="567" width="80" height="80"/>
+                                <rect key="frame" x="16" y="607" width="80" height="40"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="IMe-XZ-7Sx"/>
-                                    <constraint firstAttribute="height" constant="80" id="xqS-po-NwC"/>
+                                    <constraint firstAttribute="height" constant="40" id="NBv-oV-HET"/>
+                                    <constraint firstAttribute="width" constant="80" id="VC7-De-dMF"/>
                                 </constraints>
                                 <state key="normal" title="Add"/>
                                 <connections>
@@ -34,33 +34,133 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2s-LO-YRS">
-                                <rect key="frame" x="275" y="567" width="80" height="80"/>
+                                <rect key="frame" x="279" y="607" width="80" height="40"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="F0e-PW-CEV"/>
-                                    <constraint firstAttribute="height" constant="80" id="dI8-KA-LxA"/>
+                                    <constraint firstAttribute="width" constant="80" id="2Q4-zc-Yqd"/>
+                                    <constraint firstAttribute="height" constant="40" id="RoQ-gT-K2X"/>
                                 </constraints>
                                 <state key="normal" title="Reset"/>
                                 <connections>
                                     <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zFE-Zg-dv2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Del-TD-fm1">
+                                <rect key="frame" x="16" y="559" width="80" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Cube"/>
+                                <connections>
+                                    <action selector="nodeShapeButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gbv-UB-wF3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="200" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2n-KH-BNQ">
+                                <rect key="frame" x="104" y="559" width="80" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Sphere"/>
+                                <connections>
+                                    <action selector="nodeShapeButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FOI-7B-pY4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="500" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqS-GK-c3v">
+                                <rect key="frame" x="104" y="511" width="80" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Cilinder"/>
+                                <connections>
+                                    <action selector="nodeShapeButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ErL-kw-VQs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="800" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSK-Ms-ni3">
+                                <rect key="frame" x="16" y="511" width="80" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Plane"/>
+                                <connections>
+                                    <action selector="nodeShapeButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nYn-FS-oVt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="600" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="are-wf-bB7">
+                                <rect key="frame" x="192" y="511" width="80" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Tube"/>
+                                <connections>
+                                    <action selector="nodeShapeButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NeX-XW-ctK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="700" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYe-RF-NRF">
+                                <rect key="frame" x="280" y="511" width="80" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Torus"/>
+                                <connections>
+                                    <action selector="nodeShapeButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oFZ-wO-g0T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="300" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zaq-Pk-b4O">
+                                <rect key="frame" x="192" y="559" width="80" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Capsule"/>
+                                <connections>
+                                    <action selector="nodeShapeButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KIh-f7-TZE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="400" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nS5-xh-myF">
+                                <rect key="frame" x="279" y="559" width="80" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Cone"/>
+                                <connections>
+                                    <action selector="nodeShapeButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ek3-Fo-vPF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="900" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzQ-8m-pzi">
+                                <rect key="frame" x="103" y="463" width="80" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Pyramid"/>
+                                <connections>
+                                    <action selector="nodeShapeButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="87r-i1-frh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1000" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vui-26-ihj">
+                                <rect key="frame" x="191" y="463" width="80" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Custom"/>
+                                <connections>
+                                    <action selector="nodeShapeButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tlR-Kf-kjY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9e2-xa-gOE" secondAttribute="bottom" constant="20" id="IgL-q9-trp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="b2s-LO-YRS" secondAttribute="bottom" constant="20" id="J0z-Lk-Xs2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="b2s-LO-YRS" secondAttribute="bottom" constant="20" id="3Ur-Y7-vPb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9e2-xa-gOE" secondAttribute="bottom" constant="20" id="HMh-Nv-laY"/>
                             <constraint firstItem="ImS-u6-hTW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="J5U-u3-Oye"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b2s-LO-YRS" secondAttribute="trailing" constant="20" id="Mv7-b9-eKH"/>
+                            <constraint firstItem="9e2-xa-gOE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="KGj-qZ-qcl"/>
                             <constraint firstItem="ImS-u6-hTW" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="QJ1-r5-fpZ"/>
                             <constraint firstItem="ImS-u6-hTW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="han-Mp-lju"/>
-                            <constraint firstItem="9e2-xa-gOE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="yQh-F4-Ay9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b2s-LO-YRS" secondAttribute="trailing" constant="16" id="wrZ-lA-4ac"/>
                             <constraint firstItem="ImS-u6-hTW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zjC-h9-UWB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="sceneView" destination="ImS-u6-hTW" id="FB2-kF-Otf"/>
+                        <outletCollection property="nodeShapeButtons" destination="Del-TD-fm1" collectionClass="NSMutableArray" id="tlu-WH-Ekr"/>
+                        <outletCollection property="nodeShapeButtons" destination="s2n-KH-BNQ" collectionClass="NSMutableArray" id="73W-KS-dzJ"/>
+                        <outletCollection property="nodeShapeButtons" destination="zaq-Pk-b4O" collectionClass="NSMutableArray" id="QnU-U4-VqF"/>
+                        <outletCollection property="nodeShapeButtons" destination="nS5-xh-myF" collectionClass="NSMutableArray" id="xFH-h2-gsY"/>
+                        <outletCollection property="nodeShapeButtons" destination="bSK-Ms-ni3" collectionClass="NSMutableArray" id="KiL-06-lLO"/>
+                        <outletCollection property="nodeShapeButtons" destination="sqS-GK-c3v" collectionClass="NSMutableArray" id="Klo-iO-NO8"/>
+                        <outletCollection property="nodeShapeButtons" destination="are-wf-bB7" collectionClass="NSMutableArray" id="Sa2-3Y-7dD"/>
+                        <outletCollection property="nodeShapeButtons" destination="vYe-RF-NRF" collectionClass="NSMutableArray" id="5IH-Fa-St7"/>
+                        <outletCollection property="nodeShapeButtons" destination="BzQ-8m-pzi" collectionClass="NSMutableArray" id="eXs-5Y-Mj6"/>
+                        <outletCollection property="nodeShapeButtons" destination="vui-26-ihj" collectionClass="NSMutableArray" id="gDF-m0-L0T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
