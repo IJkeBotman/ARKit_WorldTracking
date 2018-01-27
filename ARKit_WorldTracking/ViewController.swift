@@ -39,7 +39,6 @@ class ViewController: UIViewController {
         node.position = SCNVector3(0, 0, -0.3)
         self.sceneView.scene.rootNode.addChildNode(node)
         
-        
     }
     
     @IBAction func reset(_ sender: Any) {
@@ -86,7 +85,7 @@ class ViewController: UIViewController {
         } else if sender.tag == 800 {
             node.geometry = SCNPlane(width: 0.2, height: 0.2)
         } else if sender.tag == 900 {
-            node.geometry = SCNPyramid(width: 0.1, height: 0.2, length: 0.1)
+            node.geometry = SCNPyramid(width: 0.1, height: 0.1, length: 0.1)
         } else if sender.tag == 1000 {
             let path = UIBezierPath()
             path.move(to: CGPoint(x: 0, y: 0))
@@ -109,6 +108,7 @@ class ViewController: UIViewController {
             boxNode.geometry?.firstMaterial?.diffuse.contents = UIColor.red
             boxNode.position = SCNVector3(0, -0.05, 0)
             doorNode.position = SCNVector3(0.0, -0.02, 0.053)
+            node.eulerAngles = SCNVector3(Float(180.degreesToRadians), 0, 0)
             node.addChildNode(boxNode)
             boxNode.addChildNode(doorNode)
             
@@ -120,8 +120,11 @@ class ViewController: UIViewController {
             node.geometry?.firstMaterial?.specular.contents = UIColor.orange
         }
     }
-    
-    
-    
+}
+
+extension Int {
+    var degreesToRadians: Double {
+        return Double(self) * .pi / 180
+    }
 }
 
