@@ -118,7 +118,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="900" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzQ-8m-pzi">
-                                <rect key="frame" x="103" y="463" width="80" height="40"/>
+                                <rect key="frame" x="16" y="463" width="80" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Pyramid"/>
@@ -127,12 +127,30 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1000" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vui-26-ihj">
-                                <rect key="frame" x="191" y="463" width="80" height="40"/>
+                                <rect key="frame" x="104" y="463" width="80" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Custom"/>
+                                <state key="normal" title="Custom 1"/>
                                 <connections>
                                     <action selector="nodeShapeButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tlR-Kf-kjY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwI-qI-mk4">
+                                <rect key="frame" x="280" y="463" width="80" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Child"/>
+                                <connections>
+                                    <action selector="nodeShapeButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bY1-FY-rJf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1200" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i77-oq-n9s">
+                                <rect key="frame" x="192" y="463" width="80" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Custom 2"/>
+                                <connections>
+                                    <action selector="nodeShapeButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="faJ-ph-rSX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -161,6 +179,8 @@
                         <outletCollection property="nodeShapeButtons" destination="vYe-RF-NRF" collectionClass="NSMutableArray" id="5IH-Fa-St7"/>
                         <outletCollection property="nodeShapeButtons" destination="BzQ-8m-pzi" collectionClass="NSMutableArray" id="eXs-5Y-Mj6"/>
                         <outletCollection property="nodeShapeButtons" destination="vui-26-ihj" collectionClass="NSMutableArray" id="gDF-m0-L0T"/>
+                        <outletCollection property="nodeShapeButtons" destination="bwI-qI-mk4" collectionClass="NSMutableArray" id="AQs-TR-EQN"/>
+                        <outletCollection property="nodeShapeButtons" destination="i77-oq-n9s" collectionClass="NSMutableArray" id="rDe-jM-yr5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

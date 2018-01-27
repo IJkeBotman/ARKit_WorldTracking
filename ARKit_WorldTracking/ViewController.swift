@@ -38,6 +38,8 @@ class ViewController: UIViewController {
         node.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
         node.position = SCNVector3(0, 0, -0.3)
         self.sceneView.scene.rootNode.addChildNode(node)
+        
+        
     }
     
     @IBAction func reset(_ sender: Any) {
@@ -62,6 +64,10 @@ class ViewController: UIViewController {
         }
         
         sender.backgroundColor = UIColor.white
+        
+        self.sceneView.scene.rootNode.enumerateChildNodes { (node, _) in
+            node.removeFromParentNode()
+        }
         
         if sender.tag == 100 {
             node.geometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
@@ -90,6 +96,23 @@ class ViewController: UIViewController {
             path.addLine(to: CGPoint(x: 0.2, y: 0.0))
             let shape = SCNShape(path: path, extrusionDepth: 0.2)
             node.geometry = shape
+        } else if sender.tag == 1100 {
+            node.geometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
+            let cylinderNode = SCNNode(geometry: SCNCylinder(radius: 0.1, height: 0.2))
+            cylinderNode.position = SCNVector3(-0.3, 0.2, -0.3)
+            node.addChildNode(cylinderNode)
+        } else if sender.tag == 1200 {
+            node.geometry = SCNPyramid(width: 0.1, height: 0.1, length: 0.1)
+            let boxNode = SCNNode(geometry: SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0))
+            let doorNode = SCNNode(geometry: SCNPlane(width: 0.03, height: 0.06))
+            doorNode.geometry?.firstMaterial?.diffuse.contents = UIColor.brown
+            boxNode.geometry?.firstMaterial?.diffuse.contents = UIColor.red
+            boxNode.position = SCNVector3(0, -0.05, 0)
+            doorNode.position = SCNVector3(0.0, -0.02, 0.053)
+            node.addChildNode(boxNode)
+            boxNode.addChildNode(doorNode)
+            
+            
         }
         
         self.sceneView.scene.rootNode.enumerateChildNodes { (node, _) in
